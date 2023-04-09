@@ -1,6 +1,10 @@
-body,html{
+*{
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+body,html{
+   
     font-family:  Tahoma, sans-serif;
     /* padding-top: 60px;  */
 }
@@ -26,8 +30,12 @@ section nav li a{
 }
 section nav li a.active{
     
-    color: yellowgreen;
+    color: yellow;
 }
 section div{
     height: 400px;
+    background-color: #eee;
+    margin-bottom: 10px;
+    text-align: center;
+   
 }
