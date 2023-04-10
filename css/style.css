@@ -39,3 +39,13 @@ section div{
     text-align: center;
    
 }
+.scroll-to-top{
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: none;
+}
