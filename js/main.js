@@ -62,6 +62,32 @@ $(function () {
     }
   })
 
+  /// to show popup 
+
+  $(".show-popup").on("click",function (e) {
+    e.preventDefault();
+    $(".popup").fadeIn();
+  })
+
+// to close popup when click it 
+
+$(".popup").on("click",function () {
+  $(this).fadeOut();
+})
+
+// to stop event in inner 
+
+$(".popup .inner").on("click",function (e) {
+  e.stopPropagation()
+})
+
+// to close it by button close 
+
+$(".popup .close").on("click",function (e) {
+  e.preventDefault();
+  $(".popup ").fadeOut()
+})
+
 
    
 
