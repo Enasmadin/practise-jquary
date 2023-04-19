@@ -18,7 +18,16 @@
     </nav>
   </section>
   <section>
-    <div id="home" class="block">  <h1> Home</h1></div>
+    <div id="home" class="block"> 
+       <h1> Home</h1>
+       <!-- MAKE EFFECT ON BUTTON  -->
+       <div class="effct-button">
+        <button class="effct-button-left">
+          <span> </span>
+          <span>  download </span>
+        </button>
+      </div>
+    </div>
     <div id="about" class="block"> <h1> About Us</h1>  </div>
     <div id="Services" class="block">  <h1> Services</h1> </div>
     <div id="Soulations" class="block"> <h1>  Soulations</h1>   </div>
@@ -33,17 +42,38 @@
   <!-- end scroll-to-top -->
 
   <!-- popup -->
-  <button class="show-popup">  show popup </button>
-  
-  <div class="popup">
+  <!-- <button class="show-popup"  >  show first popup </button> <br> -->
+
+
+  <button class="show-popup first" data-popup="popup-first"> show  first popup </button>
+</br>
+  <button class="show-popup seconed" data-popup="popup-seconed">  show   seconed popup </button> 
+ 
+  <div class="popup popup-first">
    
     <div class="inner">
-     <h2>  this is our popus </h2>
+     <h2>  this is  first  popus </h2>
      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quam debitis ab labore ipsam </p>
      <button class="close"> close </button>
     </div>
   </div>
   <!-- end popup -->
+    <!--  another popup -->
+  
+  
+    <div class=" popup popup-seconed">
+     
+      <div class="inner">
+       <h2>  this is seconed popup  </h2>
+       <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quam debitis ab labore ipsam </p>
+       <button class="close"> close </button>
+      </div>
+    </div>
+    <!-- end popup -->
+
+   
+
+
   
  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

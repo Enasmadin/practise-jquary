@@ -66,7 +66,8 @@ $(function () {
 
   $(".show-popup").on("click",function (e) {
     e.preventDefault();
-    $(".popup").fadeIn();
+    // $(".popup").fadeIn();
+    $('.'+ $(this).data('popup')).fadeIn()
   })
 
 // to close popup when click it 
@@ -85,7 +86,28 @@ $(".popup .inner").on("click",function (e) {
 
 $(".popup .close").on("click",function (e) {
   e.preventDefault();
-  $(".popup ").fadeOut()
+  // $(".popup ").fadeOut()
+  $(this).parentsUntil('.popup').parent().fadeOut();
+})
+
+//  to make scape 
+
+$(document).keydown(function (e) {
+  if(e.keyCode ==  27){
+    $(".popup").fadeOut(); 
+  }
+})
+
+// to make animation that effect button 
+$(".effct-button-left").hover(function () {
+  $(this).find("span").eq(0).animate({
+    width:"100%"
+  },2000)
+  
+},function () {
+  $(this).find("span").eq(0).animate({
+    width:"0%"
+  },3000)
 })
 
 
