@@ -98,7 +98,7 @@ $(document).keydown(function (e) {
   }
 })
 
-// to make animation that effect button 
+// to make animation that effect button left
 $(".effct-button-left").hover(function () {
   $(this).find("span").eq(0).animate({
     width:"100%"
@@ -110,6 +110,31 @@ $(".effct-button-left").hover(function () {
   },3000)
 })
 
+//to make animation that effect button left
+
+$(".effct-button-top").hover(function () {
+  $(this).find("span").eq(0).animate({
+    height:"100%"
+  },2000)
+  
+},function () {
+  $(this).find("span").eq(0).animate({
+   height:"0%"
+  },2000)
+})
+
+//to make animation that effect button side
+
+$(".effct-button-side").hover(function () {
+  $(this).find("span").eq(0).animate({
+    width:"100%"
+  },1000)
+  
+},function () {
+  $(this).find("span").eq(0).animate({
+   width:"0%"
+  },1000)
+})
 
    
 
