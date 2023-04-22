@@ -123,7 +123,7 @@ $(".effct-button-top").hover(function () {
   },2000)
 })
 
-//to make animation that effect button side
+//to make animation that effect button border 
 
 $(".effct-button-side").hover(function () {
   $(this).find("span").eq(0).animate({
@@ -134,6 +134,28 @@ $(".effct-button-side").hover(function () {
   $(this).find("span").eq(0).animate({
    width:"0%"
   },1000)
+})
+//to make animation that effect button border  top 
+
+$(".effct-border-top").hover(function () {
+  $(this).find("span").eq(0).animate({
+    height:"100%"
+  },1000)
+  
+},function () {
+  $(this).find("span").eq(0).animate({
+   height:"0%"
+  },1000)
+})
+
+//  animated brogress 
+$(".progress-animated span").each(function () {
+   $(this).animate({
+     width:$(this).attr("data-progress")+'%'
+   },1000,function () {
+    $(this). text($(this).attr("data-progress")+'%')
+    
+   })
 })
 
    
