@@ -18,6 +18,122 @@ section nav{
    
     top:0;
 }
+/*  start fixed menu */
+.fixed-menu{
+    position: fixed;
+    z-index: 9999;
+    background-color: black;
+    width: 250px;
+    height: 100%;
+    color: white;
+    left: -250px; 
+    top: 0;
+
+}
+.fixed-menu .fa-gear{
+    color: white;
+    position: absolute;
+    right:  -50px;
+    background-color: black;
+    width: 50px;
+    padding: 5px 0;
+
+    text-align: center;
+   border-radius: 2px;
+   top: 10%;
+}
+.change-color li{
+ display: inline-block;
+ width: 35px;
+ height: 35px;
+ margin-top: 5px;
+ cursor: pointer;
+
+}
+[data-color="blue"]{
+    background-color: #0e3aff;
+}
+[data-color="red"]{
+    background-color: #ff0e0e;
+}
+[data-color="orange"]{
+    background-color: #728a1c;
+}
+[data-color="purble"]{
+    background-color: #7f16a8;
+}
+[data-color="green"]{
+    background-color: #3ad6eb;
+}
+/* changes color */
+
+[data-default-color="blue"] .skin-color{
+    color: #0e3aff;
+
+}
+[data-default-color="blue"] .skin-background{
+    color: #dce3ff;
+    background-color: #3d3aeb;
+
+}
+[data-default-color="red"] .skin-color{
+    color: #ee0b57;
+
+}
+[data-default-color="red"] .skin-background{
+    color: #dce3ff;
+    background-color: #ee0b57;
+
+}
+[data-default-color="orange"] .skin-color{
+    color: #728a1c;
+
+}
+[data-default-color="orange"] .skin-background{
+    color: #dce3ff;
+    background-color: #728a1c;
+
+}
+[data-default-color="purble"] .skin-color{
+    color: #d733f8;
+
+}
+[data-default-color="red"] .skin-background{
+    color: #dce3ff;
+    background-color: red;
+
+}
+[data-default-color="green"] .skin-color{
+    color: #33f84d;
+
+}
+[data-default-color="green"] .skin-background{
+    color: #dce3ff;
+    background-color: #24ce1e;
+
+}
+[data-default-color="purble"] .skin-color{
+    color: #7f16a8;
+
+}
+[data-default-color="purble"] .skin-background{
+    color: #dce3ff;
+    background-color: #7f16a8;
+
+}
+[data-default-color="green"] .skin-color{
+    color: #3ad6eb;
+
+}
+[data-default-color="green"] .skin-background{
+    color: #dce3ff;
+    background-color: #3ad6eb;
+
+}
+
+
+/* end fixed menu */
+/* start section */
 section nav li {
   
     display: inline-block;
@@ -33,11 +149,9 @@ section nav li a.active{
     color: yellow;
 }
 section div{
-    height: 400px;
+    height: 1000px;
     background-color: #eee;
     margin-bottom: 10px;
-    
-   
 
 }
 section div h1{
@@ -258,4 +372,86 @@ section div h1{
 .progress-amethylest span{
     background-color: #8E44AD;
 }
+
+/*  gallary  */
+.images{
+    margin-top:300px ;
+    margin-left: auto;
+    margin-right: auto;
+    width:1000px;
+    overflow: hidden;
+
+ 
+}
+.images .image-1{
+    height: 300px;
+    width: 700px;
+   padding-bottom: 0; 
+   margin-bottom: 0;
+   position: relative;
+}
+.images .image-1 i{
+    padding: 12px 15px; 
+   position: absolute;
+   top: 0;
+   z-index: 2;
+   cursor: pointer;
+
+}
+ .images .image-1 .fa-chevron-left{
+   left: 0;
+  } 
+  .images .image-1 .fa-chevron-right{
+   right: 0;
+  } 
+  
+
+
+.images .image-1 img{
+ height: 100%;
+ width: 100%;
+ 
+}
+
+.themes{
+    width: 700px;
+}
+
+
+.themes-1{
+ 
+   height: 100px;
+    float: left;
+    width: 20%;
+
+
+  }
+  
+  .themes-1{
+ 
+    height: 100px;
+    float: left;
+    width: 19.6%;
+    cursor: pointer;
+  
+   }
+   .themes-1:not(:last-child){
+     margin-right: 0.5%;
+   } 
+ .themes-1 img{
+    width: 100%;
+    height: 100%;
+    border: 3px solid #BBB;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    opacity: 0.6;
+
+  }
+  .selected{
+    border: 3px solid #e63b3b !important; 
+    opacity: 1 !important;
+  }
+
 
