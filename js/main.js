@@ -201,6 +201,19 @@ $(".change-color li").on("click",function () {
 })
 
 // add selected  and gallary 
+var numberOfImages = $(".themes").children().length,
+marginBetwenImages=".5",
+totalMarginBetweenImages=(numberOfImages-1)* marginBetwenImages,
+widthOfImages= (100- totalMarginBetweenImages)/numberOfImages;
+console.log(widthOfImages);
+$(".themes-1").css({
+  width:'widthOfImages' + '%',
+  
+})
+$(".themes-1:not(:last-child)").css({
+  marginRight:'marginBetwenImages' + '%',
+})
+// console.log($('.themes-1:last-child'))
 
 $(".themes-1 img").on("click",function () {
   $(this).addClass("selected").parent().siblings().children().removeClass("selected");
@@ -208,19 +221,29 @@ $(".themes-1 img").on("click",function () {
 })
 
 $(".image-1 .fa-chevron-left").on("click",function () {
-
-  $(".themes-1 .selected").parent().prev().children().click();
-  
-})
-$(".image-1 .fa-chevron-right").on("click",function () {
+  if($(".themes-1 .selected ").parent().is(":first-child")){
+    $(".themes-1:last").children().click();
     
-
-   if((" .themes div").is(':last-child')){
-
 
    }
    else{
-    $(".themes-1 .selected").parent().next().children().click();
+    $(".themes-1 .selected").parent().prev().children().click();
+
+   }
+
+  
+  
+})
+
+$(".image-1 .fa-chevron-right").on("click",function () {
+    
+
+   if($('.themes-1 .selected').parent().is(':last-child')){
+    $(".themes-1 ").eq(0).children().click();
+
+   }
+   else{
+     $(".themes-1 .selected").parent().next().children().click();
 
 
    }
@@ -228,6 +251,40 @@ $(".image-1 .fa-chevron-right").on("click",function () {
  
   
 })
+
+// toggle product description 
+$(".product i ,.item i").on("click",function () {
+  $(this).toggleClass(" fa-plus fa-minus");
+  $(this).next('p').slideToggle();
+})
    
+$(".items .view-option i").on("click",function () {
+  $(this).addClass("active").siblings().removeClass("active");
+  $(".items").removeClass("grid-system list-system")
+
+  $(".items").addClass($(this).data('view'))
+})
+
+// error massage 
+$(".error-message").each(function () {
+  $(this).animate({
+    right:0
+  },2000,function () {
+    $(this).delay(3000).fadeOut()
+  })
+})
+
+/* our form 
+*/
+//  hide placeholder and apper puler 
+var placeAttr = '';
+$('[placeholder]').focus(function () {
+
+  placeAttr = $(this).attr('placeholder');
+  $(this).attr("placeholder" ,'')
+   
+}).blur(function () {
+  $(this).attr("placeholder" ,placeAttr)
+})
 
 })

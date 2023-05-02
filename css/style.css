@@ -152,6 +152,7 @@ section div{
     height: 1000px;
     background-color: #eee;
     margin-bottom: 10px;
+    overflow: hidden;
 
 }
 section div h1{
@@ -380,6 +381,7 @@ section div h1{
     margin-right: auto;
     width:1000px;
     overflow: hidden;
+   
 
  
 }
@@ -431,13 +433,11 @@ section div h1{
  
     height: 100px;
     float: left;
-    width: 19.6%;
+    /* width: 19.6%; */
     cursor: pointer;
   
    }
-   .themes-1:not(:last-child){
-     margin-right: 0.5%;
-   } 
+ 
  .themes-1 img{
     width: 100%;
     height: 100%;
@@ -455,3 +455,216 @@ section div h1{
   }
 
 
+/*  products  */
+.products{
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    width:1000px;
+    height: 250px;
+}
+.product{
+    width: 45%;
+    float: left;
+    background-color: #fff;
+    padding: 8px 5px;
+   
+}
+.product:first-child{
+    margin-right: 10px;
+}
+.product .header{
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+.product .date {
+    padding: 4px 0px;
+    display: block;
+}
+.product i{
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #BBB;
+    cursor: pointer;
+}
+.product .description{
+    display: none;
+    padding-bottom: 5px;
+}
+/* start items  */
+.items.grid-system{
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    width:1000px;
+    height: 250px;
+  
+}
+.items{
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    width:1000px;
+    height: 250px;
+   
+
+}
+.items .view-option{
+
+/* width: 50px;*/
+height: 30px; 
+overflow: hidden;
+
+
+}
+.items .view-option i{
+    float: right; 
+    margin-right: 5px;
+
+}
+.items .view-option i.active{
+    
+    color: #0e36b9;
+}
+
+.items.grid-system .item{
+    width: 40%;
+    float: left;
+    background-color: #fff;
+    padding: 8px 5px;
+   
+}
+.items.grid-system .item.first{
+    margin-right: 10px;
+}
+.items.grid-system .item .header{
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+.items.grid-system .item .date {
+    padding: 4px 0px;
+    display: block;
+}
+.items.grid-system .item i{
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #BBB;
+    cursor: pointer;
+}
+.items.grid-system .item .description{
+    display: none;
+    padding-bottom: 5px;
+}
+/* list item */ 
+.items.list-system{
+   
+    margin-left: auto;
+    margin-right: auto;
+    width:1000px;
+    height: 250px;
+    
+   
+}
+.items.list-system .item{
+    position: relative;
+    width: 100%;
+    background-color: white;
+    height:40%;
+   
+    
+}
+.items.list-system .item img {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0;
+   
+}
+
+ .items.list-system .item .header{
+ position: absolute;
+ left: 150px;
+ top: 10px;
+   
+}
+.items.list-system .item .date {
+    display: block;
+    position: absolute;
+    top: 35px;
+
+    left: 150px;
+    color: #6a585896;
+    font-size: 12px;
+}
+    
+   
+
+.items.list-system .item i{
+    display: none;
+  
+}
+.items.list-system .item .description{
+   
+
+    position: absolute;
+    left: 150px;
+    bottom: 20px;
+} 
+
+/* end items */
+
+/*  start error message */
+.error-message
+{
+ width: 300px;
+ padding: 10px;
+ position: fixed;
+ right:-100%;
+ background-color: red;
+ height:auto;
+ padding: 10px;
+ color:white;
+ text-align: center;
+}
+/* end error message */
+/* our form */
+.our-form{
+    margin-top:10px ;
+    margin-left: auto;
+    margin-right: auto;
+    width:1000px;
+    overflow: hidden;
+
+}
+form{
+    width:400px ;
+    margin-left: auto;
+    margin-right: auto;
+  
+   
+}
+.our-form input , .our-form textarea {
+    display: block;
+    padding: 10px   ;
+    border: none;
+    margin-bottom: 5px;
+    margin: 10px auto;
+   
+    outline: 0;
+}
+.our-form textarea{
+    padding-right: 18px;
+}
+.our-form input[type="submit"]{
+   
+   color: #0e3aff;
+    text-align: center;
+    background: white;
+    padding:  5px 30px;
+   
+}
+
+
+/* end form */
