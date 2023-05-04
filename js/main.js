@@ -286,5 +286,22 @@ $('[placeholder]').focus(function () {
 }).blur(function () {
   $(this).attr("placeholder" ,placeAttr)
 })
+// show message 
+
+$("[required]").blur(function () {
+  if($(this).val()===""){
+    $(this).next("span").fadeIn().delay(2000).fadeOut();
+  }
+})
+
+// add astric to all requaried filled 
+
+$('<span class="astrice"> *  </span>').insertBefore(' :input[required]');
+ $(".astrice").parent('p').css('position','relative');
+$(".astrice").css({
+  'position':"absolute",
+  'top':15,
+  'left':$('input').innerWidth()-20
+})
 
 })

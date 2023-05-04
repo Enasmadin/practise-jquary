@@ -645,14 +645,19 @@ form{
   
    
 }
+
 .our-form input , .our-form textarea {
-    display: block;
+    width: 500px;
+  
     padding: 10px   ;
     border: none;
     margin-bottom: 5px;
-    margin: 10px auto;
-   
-    outline: 0;
+     margin: 5px 0; 
+     outline: 0;
+    
+}
+.our-form span:last-child{
+    display: none;
 }
 .our-form textarea{
     padding-right: 18px;
@@ -662,7 +667,7 @@ form{
    color: #0e3aff;
     text-align: center;
     background: white;
-    padding:  5px 30px;
+    padding:  10px 30px;
    
 }
 
