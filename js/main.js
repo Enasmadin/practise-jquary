@@ -303,5 +303,17 @@ $(".astrice").css({
   'top':15,
   'left':$('input').innerWidth()-20
 })
+// custom file 
+$(".our-form input[type='file']").wrap("<p class='cuustom-file'> </p>");
+$(".cuustom-file").css({
+  'height':$('.our-form input').innerHeight()
+}).prepend("<span> enter your cv  </span>");
+$(".cuustom-file").append('<i class="fa-sharp fa-solid fa-upload"></i>');
+$(".our-form input[type='file']").change(function () {
+  $(this).prev().text($(this).val().substring(12))
+
+})
+
+
 
 })

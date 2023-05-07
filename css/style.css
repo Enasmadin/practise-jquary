@@ -646,7 +646,7 @@ form{
    
 }
 
-.our-form input , .our-form textarea {
+.our-form input , .our-form textarea , .our-form .cuustom-file {
     width: 500px;
   
     padding: 10px   ;
@@ -669,6 +669,36 @@ form{
     background: white;
     padding:  10px 30px;
    
+}
+.our-form input[type="file"]{
+  opacity: 0;
+  position: absolute;
+  top:0;
+  width:100%;
+  height:100%;
+  left:0;
+  z-index: 2;
+
+}
+.cuustom-file {
+    background-color:white; 
+    position: relative;
+}
+.cuustom-file span {
+    display: inline-block;
+    top:0;
+    position: absolute;
+    padding: 5px ;
+    color: #928383;
+   font-size: 13px;
+    
+}
+.cuustom-file  .fa-upload{
+    position: absolute;
+    right: 5px;
+    top:0;
+    padding: 5px ;
+    z-index: 1;
 }
 
 
