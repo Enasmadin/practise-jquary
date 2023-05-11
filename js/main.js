@@ -386,13 +386,53 @@ limtedCharter($(".limted-pargraf") ,100 ,$(".readMore"));
 
 
 //  bounce effect 
-$(".button-effect").on("click",function () {
- $(this).animate({
-  marginTop:'-=20px'
- },400).animate({
-  marginTop:'+=20px'
- },400)
-})
+// $(".button-effect").on("click",function () {
+//  $(this).animate({
+//   marginTop:'-=20px'
+//  },400).animate({
+//   marginTop:'+=20px'
+//  },400)
+// })
+ 
+
+// function bunceFunction( selector,value,speed,times) {
+  
+//   for( var i=0 ; i<times ;i=i+1){
+//    $(selector).animate({
+//      marginTop: '-=' + value,
+  
+//    },speed).animate({
+//        marginTop:'+=' + value
+//    },speed)
+  
+//   }
+//   $(".button-effect").on("click",function () {
+//    //  $(this).animate({
+//    //   marginTop:'-=20px'
+//    //  },400).animate({
+//    //   marginTop:'+=20px'
+//    //  },400)
+//    bunceFunction($(this),10,400,3);
+//    })
+    
+
+function bunceFunction (selector,value,speed,times) {
+   for( var i=0 ; i<times ;i=i+1){
+   $(selector).animate({
+     marginTop: '-=' + value,
+  
+   },speed).animate({
+       marginTop:'+=' + value
+  },speed)}
+}
+  $(".button-effect").on("click",function () {
+    bunceFunction($(this),10,400,3);
+  
+  })
+  
+  
+
+  
 
 
 
