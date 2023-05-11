@@ -37,10 +37,11 @@ section nav{
     background-color: black;
     width: 50px;
     padding: 5px 0;
+   
 
     text-align: center;
    border-radius: 2px;
-   top: 10%;
+   top: 50%;
 }
 .change-color li{
  display: inline-block;
@@ -152,7 +153,7 @@ section div{
     height: 1000px;
     background-color: #eee;
     margin-bottom: 10px;
-    overflow: hidden;
+    /* overflow: hidden; */
 
 }
 section div h1{
@@ -260,6 +261,24 @@ section div h1{
     width: 100%;
     height: 100%;
     
+}
+/* tages  */
+.our-form .show-tag span{
+    padding: 5px 10px;
+    background-color: #dedede;
+    display: inline-block;
+    margin:10px 10px 10px 0 ;
+    border-radius: 8px;
+    color: #6f6f6f;
+ 
+}
+.our-form .show-tag span i{
+   margin-right: 5px;
+   color:#969696;
+   cursor: pointer;
+}
+.our-form .show-tag span i:hover{
+    color:#333;
 }
 
 
@@ -703,3 +722,33 @@ form{
 
 
 /* end form */
+/* limted reading */
+
+.limted-description{
+    margin-left: auto;
+    margin-right: auto;
+    width:1000px;
+    overflow: hidden;
+    margin-top: 50px;
+    background-color: white;
+    height: auto;
+    padding: 20px;
+
+}
+.readMore{
+    border:none;
+    padding: 10px;
+    margin: 5px auto;
+}
+/* end limted reading */
+/* button-effect bounce */
+.button-effect{
+    background-color: rgb(235, 5, 5);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border-color:  rgb(235, 5, 5);
+    margin-top: 10px;
+}
+/* end button-effect bounce */

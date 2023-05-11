@@ -314,6 +314,87 @@ $(".our-form input[type='file']").change(function () {
 
 })
 
+//  indected code 
+
+$(".indectect-code").on("keyup",function (e) {
+  var indectCode= e.keyCode ||  e.which ;
+  $(".show-indect").html( '  this is deacte code for each charater ' + indectCode)
+  
+})
+
+/// choose direction for it 
+
+$(".auto-direction").on("keyup",function () {
+  
+  if($(this).val().charCodeAt(0) < 200){
+    $(this).css('direction','ltr');
+    // $(this).attr("placeholder" ,' type your yourself')
+  
+
+  }
+  else{
+    $(this).css('direction','rtl');
+    $(this).attr("placeholder" ,'من فضلم ادخل هذا الحقل')
+  }
+})
+
+// convert Input to tags 
+$(".add-tag").on("keyup",function (event) {
+  var keybordkey = event.keyCode ||  event.which ;
+   var thisvalue = $(this).val().slice(0,-1)
+  if(keybordkey == 188){
+    $(".show-tag").append("<span class='tag-span'> <i class='fa-sharp fa-solid fa-xmark'></i>" + thisvalue + "</span>");
+    $(this).val('')
+     console.log($(".show-tag .tag-span").text());
+     $(".show-tag .tag-span").each(function(){
+      if($(this).text()== "enas"){
+        console.log("jjjj")
+      }
+    });
+ 
+  }
+})
+
+/// to hide icon 
+
+$(".show-tag").on("click",".tag-span i" ,function () {
+ $(this).parent().fadeOut()
+  
+})
+
+// to limted character 
+function limtedCharter(seletor,maxlength,selectreadMore) {
+  $(seletor).each(function () {
+    if($(this).text().length > maxlength ){
+      var textAll = $(this).text();
+      var limtedchar = $(this).text().substr(0,maxlength);
+      $(this).text(limtedchar);
+
+    }
+    if( $(this).text().length ==  maxlength){
+      $(selectreadMore).on("click",function () {
+        $(seletor).text(textAll);
+      })
+    }
+
+  
+    
+  })
+
+}
+limtedCharter($(".limted-pargraf") ,100 ,$(".readMore"));
+
+
+//  bounce effect 
+$(".button-effect").on("click",function () {
+ $(this).animate({
+  marginTop:'-=20px'
+ },400).animate({
+  marginTop:'+=20px'
+ },400)
+})
+
+
 
 
 })
