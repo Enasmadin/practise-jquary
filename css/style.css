@@ -4,7 +4,7 @@
     margin: 0;
 }
 body,html{
-   
+    background-color: #eee;
     font-family:  Tahoma, sans-serif;
     /* padding-top: 60px;  */
 }
@@ -752,3 +752,95 @@ form{
     margin-top: 10px;
 }
 /* end button-effect bounce */
+/* start limted description */
+
+.all-des{
+    display: flex;
+
+}
+.all-des p{
+    flex: 1;
+     background-color: white;
+     height: fit-content;
+     margin: 10px;
+     padding: 10px;
+    
+}
+.cards{
+    margin-top: 50px;
+    position: relative;
+    height: 300px;
+    z-index: 1;
+}
+.cards p{
+    width: 150px;
+    height: 150px;
+    border: 5px solid #333;
+    position: absolute;
+    left: 50%;
+    position: absolute;
+    cursor: pointer;
+    margin-left: -75px;
+   
+
+
+}
+ .cards .card-one{
+    background-color: #0e36b9;
+}
+ .cards .card-two{
+    background-color: #24ce1e;
+}
+ .cards .card-three{
+    background-color: red;
+}
+ .cards .card-four{
+    background-color: #6f6f6f;
+}
+/* end limted descrption */
+/*  start blankwarning */
+.blank-warning{
+    display: flex;
+    width: 200px;
+     height: fit-content;
+    justify-content: center;
+    background-color: rgb(255, 46, 46);
+    color: white;
+    padding: 20px;
+    border: 1px solid #333;
+    margin: 5px auto;
+
+}
+/* end blankwarning */
+/* start to-do-list */
+.todo-list{
+    width: 400px;
+    margin: 10px auto;
+    height: auto;
+    /* padding: 20px; */
+    border: 2px solid #fff;
+}
+.todo-list h3{
+    margin: 0;
+    padding: 15px;
+    border-bottom: 2px solid #969696;
+    background-color: #EFEFEF;
+
+}
+.tasks{
+    list-style: none;
+}
+.tasks li{
+     padding: 15px 20px;
+     border-bottom: 1px dashed #ccc;
+     cursor: pointer;
+     color: #484848;
+    background-color: white;
+}
+.add-task .task-input{
+    width: 100%;
+    padding: 15px 20px;
+    border:none;
+    outline: 0;
+}
+/* end-to-do-list */

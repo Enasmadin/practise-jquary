@@ -429,8 +429,64 @@ function bunceFunction (selector,value,speed,times) {
     bunceFunction($(this),10,400,3);
   
   })
+
+  // to make height same for all the object 
+  var theMaxHeight= 0;
+  $(".all-des p").each(function () {
+   
+    if($(this).height() > theMaxHeight ){
+      theMaxHeight=$(this).height();
+      console.log(theMaxHeight)
+    }
+   
+  })
+  $(".all-des p").height(theMaxHeight);
+
+  //  enaimated to change directive cards 
+  var zIndexValue=0;
+  $(".cards p").on("click",function () {
+    $(this).animate({
+      marginTop:30,
+      left:'20%'
+
+    },400,function () {
+      zIndexValue--;
+      console.log( zIndexValue)
+      $(this).css('z-index',zIndexValue)
+      
+    }).animate({
+      left:$(this).css('left'),
+      marginTop:0,
+
+      
+    },400)
+  })
   
+  // blank-warking
+  blankWarning(".blank-warning")
+ function blankWarning(selector) {
+  $(selector).fadeOut(1000,function () {
+    $(this).fadeIn(1000);
+    blankWarning(".blank-warning");
+  })
+ }
+//  to add to task 
+ var newTask= $(".task-input");
+$(".add-task").on('submit',function (e) {
+  e.preventDefault();
+  if( newTask.val()  !=  ''){
+    
+    $("<li>"+newTask.val()+"</li>").appendTo(".tasks");
+     newTask.val('')
+  }
   
+})
+$('.tasks').on("click",'li',function () {
+  $(this).css("text-decoration-line",'line-through').delay(200).fadeOut(2000,function () {
+    $(this).remove();
+  });
+
+})
 
   
 
