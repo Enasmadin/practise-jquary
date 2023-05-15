@@ -487,6 +487,31 @@ $('.tasks').on("click",'li',function () {
   });
 
 })
+// type orr 
+    var theText = $(".typer").data('text') ,
+       theTextLength = theText.length ,
+       n= 0 ,
+       theTyper =  setInterval(function () {
+        $('.typer').each(function () {
+          $(this).html($(this).html() + theText[n]  )
+        })
+        n=n+1;
+        if(n  >= theTextLength){
+          clearInterval(theTyper)
+        }
+        
+       },100)
+
+//  total price in table 
+var totalprice= 0;
+$(".tables-data .price").each(function () {
+  totalprice += parseInt($(this).text())
+  console.log("allprice",totalprice)
+})
+$(".total").text(totalprice);
+console.log($(" .total").text())
+
+
 
   
 

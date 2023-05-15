@@ -844,3 +844,32 @@ form{
     outline: 0;
 }
 /* end-to-do-list */
+/*  start table-data */
+.tables-data{
+    width: 600px;
+    margin: 10px auto;
+    height: auto;
+    /* padding: 20px; */
+    border: 2px solid #fff;
+
+}
+.tables-data tr th{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+.tables-data tr td ,.tables-data tr th{
+    width: 300px;
+    text-align: left;
+}
+.tables-data tr:last-child td:first-child{
+    text-align: right;
+}
+
+.tables-data tr td{
+    background-color: white;
+   
+    padding: 10px;
+}
+
+/* end  table-data */
